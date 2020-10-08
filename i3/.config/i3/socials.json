@@ -1,0 +1,47 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+      "height": 1041,
+      "width": 956,
+      "x": 2880,
+      "y": 37
+    },
+    "name": "mm",
+    "percent": 0.5,
+    "swallows": [
+       {
+       "class": "^Firefox$",
+       // "instance": "^Navigator$",
+       "title": "mattermost"
+       // "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+      "height": 1041,
+      "width": 956,
+      "x": 1920,
+      "y": 37
+    },
+    "name": "Login | ProtonMail - Mozilla Firefox",
+    "percent": 0.5,
+    "swallows": [
+       {
+       "class": "^Firefox$",
+       // "instance": "^Navigator$",
+       "title": "ProtonMail"
+       // "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
