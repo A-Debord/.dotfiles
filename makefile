@@ -21,7 +21,7 @@ zsh-install:
 	sudo apt update
 	sudo apt install zsh curl
 	curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh || echo "oh my zsh is already installed"
-	sudo chsh -s $(shell which zsh)
+	chsh -s $(shell which zsh)
 
 i3-install:
 	/usr/lib/apt/apt-helper download-file https://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2020.02.03_all.deb keyring.deb SHA256:c5dd35231930e3c8d6a9d9539c846023fe1a08e4b073ef0d2833acd815d80d48
