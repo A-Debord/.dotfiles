@@ -4,9 +4,12 @@ all-conf:
 	
 	rm ~/.zshrc
 	stow zsh
+	rm -rf  ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 	
 	stow bash
+
+	rm ~/.ccache/ccache.conf
 	stow ccache
 
 vscode-install:
