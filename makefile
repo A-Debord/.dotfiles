@@ -23,7 +23,7 @@ all-install:
 	sudo apt install i3
 
 	# stow
-	sudo apt install stow 
+	sudo apt install stow git
 
 all: all-install all-conf
 
