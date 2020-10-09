@@ -4,6 +4,7 @@ all-conf:
 	
 	rm ~/.zshrc
 	stow zsh
+	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 	
 	stow bash
 
