@@ -208,7 +208,7 @@ bar {
 }
 
 # screen names
-set $main HDMI-1
+set $main HDMI-0
 set $sub DP-2
 
 # Toggle multiple screen ON

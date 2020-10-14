@@ -1,4 +1,4 @@
-all-conf:
+all-stow:
 	stow i3
 	stow git
 	
@@ -11,6 +11,9 @@ all-conf:
 
 	rm ~/.ccache/ccache.conf
 	stow ccache
+
+	# for pinentries to go through tty
+	stow gpg
 
 vscode-install:
 	wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -38,7 +41,7 @@ i3-install:
 all-install: zsh-install vscode-install
 
 	# stow
-	sudo apt install stow git
+	sudo apt install stow git pinentry-tty
 
 all: all-install all-conf
 
