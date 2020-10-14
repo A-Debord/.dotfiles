@@ -43,5 +43,5 @@ all-install: zsh-install vscode-install
 	# stow
 	sudo apt install stow git pinentry-tty
 
-all: all-install all-conf
+all: all-install all-stow
 
