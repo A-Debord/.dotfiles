@@ -1,5 +1,7 @@
 all-stow:
 	stow i3
+
+	rm ~/.gitconfig
 	stow git
 	
 	rm ~/.zshrc
@@ -9,7 +11,7 @@ all-stow:
 	
 	stow bash
 
-	rm ~/.ccache/ccache.conf
+	rm  -f ~/.ccache/ccache.conf
 	stow ccache
 
 	# for pinentries to go through tty
@@ -38,10 +40,13 @@ i3-install:
 	sudo apt update
 	sudo apt install i3 i3blocks i3lock i3status rofi
 
-all-install: zsh-install vscode-install
+misc-install:
+	sudo apt install stow \
+		git \
+		pinentry-tty
 
-	# stow
-	sudo apt install stow git pinentry-tty
+all-install: zsh-install vscode-install misc-install
+
 
 all: all-install all-stow
 
