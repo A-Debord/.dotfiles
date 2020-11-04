@@ -24,3 +24,8 @@ create-branch ()
 {
   git -C $1 checkout -b $(make branch)
 }
+
+git-tree ()
+{
+  git log --graph --abbrev-commit --decorate --oneline
+}
