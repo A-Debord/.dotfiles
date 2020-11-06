@@ -17,7 +17,7 @@ function =
 
 sofa ()
 {
-  SOFA_ERROR_CYCLIC_UPDATE=1 SOFA_ERROR_READ_LOCKED_DATA=1 SOFA_ERROR_DANGLING_END_EDIT=1 SOFA_ERROR_WRITE_LOCKED_DATA=1 debug/bin/cli -a -n 4 --pull -l sofacommon -l sofageneral -p sofaqt $1
+  release/bin/cli -a -n 4 --pull -m $1
 }
 
 create-branch ()
