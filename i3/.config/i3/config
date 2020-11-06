@@ -209,7 +209,7 @@ bar {
 
 # screen names
 set $main HDMI-0
-set $sub DP-2
+set $sub DP-0
 
 # Toggle multiple screen ON
 exec xrandr --output $sub --auto --right-of $main
