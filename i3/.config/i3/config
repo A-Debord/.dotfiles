@@ -219,7 +219,7 @@ bindsym $mod+p move workspace to output right
 
 ## quick terminal
 exec --no-startup-id i3-sensible-terminal -l KJ -T "Life is beautiful."
-for_window [title="Life"] move scratchpad; [title="Life"] scratchpad show; move position 200px 22px; resize set height 500px; resize set width 1500px; move scratchpad
+for_window [title="Life"] move scratchpad; [title="Life"] scratchpad show; move position 100px 22px; resize set height 500px; resize set width 1000px; move scratchpad
 mode "quick-terminal" {
         bindsym $mod+t [title="Life"] focus; scratchpad show; mode "default"
         bindsym Escape [title="Life"] focus; scratchpad show; mode "default"
@@ -240,6 +240,13 @@ default_floating_border pixel
 
 # screenshot
 bindsym $mod+shift+p exec gnome-screenshot -i 
+
+# backlight
+# had to fill /etc/X11/xorg.conf to make it work
+# https://unix.stackexchange.com/questions/301724/xbacklight-not-working
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+
 
 # ws default location
 workspace $ws1 output $main
@@ -265,7 +272,7 @@ exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/adrien/.config/i3
 exec code
 
 
-assign [class="ClockWork"] 9
+assign [class="ClockWork"] 3
 assign [class="AnatoRun"] 9
 assign [class="CircleApp"] 9
 assign [class="runSofa2"] 9
@@ -276,3 +283,6 @@ assign [class="Gnome-calendar"] 8
 
 # enable numlock on startup
 exec numlockx on
+
+# pad tap enabled
+exec xinput set-prop 14 301 1 
