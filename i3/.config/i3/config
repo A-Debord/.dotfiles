@@ -289,4 +289,4 @@ assign [class="Gnome-calendar"] 8
 exec numlockx on
 
 # pad tap enabled
-exec xinput set-prop 14 301 1 
+exec sh enable_touchpad_tapping.sh
