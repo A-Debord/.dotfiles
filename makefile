@@ -38,7 +38,7 @@ i3-install:
 	rm ./keyring.deb
 	echo "deb [arch=amd64] https://debian.sur5r.net/i3/ $(shell grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" | sudo tee /etc/apt/sources.list.d/sur5r-i3.list
 	sudo apt update
-	sudo apt install i3 i3blocks i3lock i3status rofi xautolock
+	sudo apt install i3 i3blocks i3lock i3status rofi xautolock gnome-calendar
 
 misc-install:
 	sudo apt install stow \
