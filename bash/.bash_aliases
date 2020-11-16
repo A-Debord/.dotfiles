@@ -17,12 +17,16 @@ function =
 
 sofa ()
 {
-  release/bin/cli -a -n 4 --pull -m $1
+  release/bin/cli -a -n 4 --pull -m -p sofaqt -p cimgplugin $1
 }
 
 create-branch ()
 {
   git -C $1 checkout -b $(make branch)
+}
+
+cb(){
+  create-branch $1
 }
 
 git-tree ()
