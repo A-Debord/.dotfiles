@@ -15,7 +15,7 @@
        {
        "class": "^Firefox$",
        // "instance": "^Navigator$",
-       "title": "mattermost"
+       "title": "Mattermost"
        // "window_role": "^browser$"
        }
     ],
