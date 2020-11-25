@@ -20,6 +20,16 @@ sofa ()
   release/bin/cli -a -n 4 --pull -m -p sofaqt -p cimgplugin $1
 }
 
+srsofa()
+{
+  SOFA_SAVE_REGRESSION=1 sofa $1
+}
+
+rsofa()
+{
+  release/bin/runSofa2 $1
+}
+
 create-branch ()
 {
   git -C $1 checkout -b $(make branch)
