@@ -49,6 +49,7 @@ bindsym $mod+Shift+A kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show drun -config ~/.config/i3/rofi.rasi
 bindsym $mod+a exec rofi -show power -config ~/.config/i3/rofi.rasi -width 20 -lines 6
+bindsym $mod+Escape exec bash ~/.config/i3/locknbuild.sh
 
 focus_follows_mouse no
 # There also is the (new) i3-dmenu-desktop which only displays applications
