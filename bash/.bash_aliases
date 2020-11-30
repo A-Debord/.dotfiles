@@ -20,6 +20,11 @@ sofa ()
   release/bin/cli -a -n 4 --pull -m -p sofaqt -p cimgplugin $1
 }
 
+dsofa ()
+{
+  ASAN_OPTIONS=detect_leaks=0 debug/bin/cli -a -n 4 --pull -m -p sofaqt -p cimgplugin $1
+}
+
 srsofa()
 {
   SOFA_SAVE_REGRESSION=1 sofa $1
