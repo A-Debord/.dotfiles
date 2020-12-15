@@ -2,6 +2,9 @@
 # ccache
 export PATH=/usr/lib/ccache:$PATH
 
+# distcc
+export CCACHE_PREFIX="distcc"
+
 # clang + libstdc++
 export LDFLAGS="-lstdc++ -lm"
 
