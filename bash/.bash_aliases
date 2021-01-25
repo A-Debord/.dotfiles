@@ -1,3 +1,4 @@
+export PATH=/home/adrien/.local/bin:$PATH
 
 # ccache
 export PATH=/usr/lib/ccache:$PATH
@@ -36,6 +37,11 @@ srsofa()
 rsofa()
 {
   release/bin/runSofa2 $1
+}
+
+asofa()
+{
+  ANATO_RENDER_ANTIALIASING_SAMPLES=0 release/bin/AnatoRun $1
 }
 
 create-branch ()
