@@ -220,7 +220,7 @@ bindsym $mod+p move workspace to output right
 
 ## quick terminal
 exec --no-startup-id i3-sensible-terminal -l KJ -T "Life is beautiful."
-for_window [title="Life"] move scratchpad; [title="Life"] scratchpad show; move position 200px 22px; resize set height 500px; resize set width 1500px; move scratchpad
+for_window [title="Life"] move scratchpad; [title="Life"] scratchpad show; move position 200px 22px; resize set height 500px; resize set width 800px; move scratchpad
 mode "quick-terminal" {
         bindsym $mod+t [title="Life"] focus; scratchpad show; mode "default"
         bindsym Escape [title="Life"] focus; scratchpad show; mode "default"
@@ -260,11 +260,11 @@ workspace $ws10 output $sub
 
 # startup
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/adrien/.config/i3/fox.json'"
-exec firefox -new-window https://gitlab.com/a.debord/anato-gestion/-/boards
+exec qutebrowser --target window https://gitlab.com/a.debord/anato-gestion/-/boards
 
 exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/adrien/.config/i3/socials.json'"
-exec firefox -new-window https://mm.anatoscope.com/
-exec firefox -new-window www.protonmail.com/login
+exec qutebrowser --target window https://mm.anatoscope.com/
+exec qutebrowser --target window www.protonmail.com/login
 
 exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/adrien/.config/i3/code.json'"
 exec code
@@ -274,10 +274,3 @@ assign [class="ClockWork"] 9
 assign [class="AnatoRun"] 9
 assign [class="CircleApp"] 9
 assign [class="runSofa2"] 9
-
-# so i get the notifs ...
-exec gnome-calendar
-assign [class="Gnome-calendar"] 8
-
-# enable numlock on startup
-exec numlockx on
