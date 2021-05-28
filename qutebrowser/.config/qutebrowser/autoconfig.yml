@@ -12,3 +12,8 @@ settings:
         <Alt+b>: :spawn --userscript qute-bitwarden
   content.notifications:
     https://www.reddit.com: false
+  editor.command:
+    global:
+    - code
+    - -g
+    - '{file}:{line}:{column0}'
