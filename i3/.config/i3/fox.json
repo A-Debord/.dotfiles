@@ -13,10 +13,10 @@
    "percent": 1,
    "swallows": [
       {
-         "class": "^Firefox$",
-         "instance": "^Navigator$",
-         "title": "GitLab",
-         "window_role": "^browser$"
+         "class": "^qutebrowser$",
+         "instance": "^qutebrowser$",
+         "title": "GitLab"
+         // "window_role": "^browser$"
       }
    ],
    "type": "con"
