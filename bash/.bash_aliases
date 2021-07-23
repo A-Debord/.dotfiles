@@ -10,8 +10,9 @@ export CCACHE_PREFIX="distcc"
 export LDFLAGS="-lstdc++ -lm"
 
 # Qt
-
 export Qt5_DIR=/mnt/data/Qt/5.12.0/gcc_64/lib/cmake/Qt5
+
+export SOFAPYTHON_CHECK=0
 
 # calculator 
 function = 
@@ -21,27 +22,34 @@ function =
 
 sofa ()
 {
-  release/bin/cli -a -n 4 --pull -m -p sofaqt -p cimgplugin $1
+  # release/bin/cli -a -n 4 --pull -m -p cimgplugin $@
+  release/bin/cli -a -n 4 --pull -m -d -p cimgplugin -p sofaqt $@ ; echo "exit code $?"
 }
 
 dsofa ()
 {
-  ASAN_OPTIONS=detect_leaks=0 debug/bin/cli -a -n 4 --pull -m -p sofaqt -p cimgplugin $1
+  # ASAN_OPTIONS=detect_leaks=0 debug/bin/cli -a -n 4 --pull -m -p cimgplugin $@
+  ASAN_OPTIONS=detect_leaks=0 debug/bin/cli -a -n 4 --pull -m -d -p cimgplugin $@ ; echo "exit code $?"
 }
 
 srsofa()
 {
-  SOFA_SAVE_REGRESSION=1 sofa $1
+  SOFA_SAVE_REGRESSION=1 sofa $@
 }
 
 rsofa()
 {
-  release/bin/runSofa2 $1
+  release/bin/runSofa2 $@ ; echo "exit code $?"
 }
 
 asofa()
 {
-  ANATO_RENDER_ANTIALIASING_SAMPLES=0 release/bin/AnatoRun $1
+  ANATO_RENDER_ANTIALIASING_SAMPLES=0 release/bin/AnatoRun $@ ; echo "exit code $?"
+}
+
+basofa()
+{
+  ANATO_RENDER_ANTIALIASING_SAMPLES=0 release/bin/AnatoRun -b -a 4 $@ ; echo "exit code $?"
 }
 
 create-branch ()
@@ -56,4 +64,9 @@ cb(){
 git-tree ()
 {
   git log --graph --abbrev-commit --decorate --oneline
+}
+
+wplexus ()
+{
+  wakeonlan c8:d3:ff:44:94:e6
 }
