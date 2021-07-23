@@ -234,7 +234,12 @@ set $lock_cmd i3lock -c 000000 -e
 bindsym $mod+l exec $lock_cmd
 
 # auto lock after inactive 4min (default ubuntu screen disables after 5min)
-exec xautolock -detectsleep -time 4 -locker "$lock_cmd"
+# exec xautolock -detectsleep -time 4 -locker "$lock_cmd"
+
+# disable screen saver
+exec xset s off
+exec xset -dpms
+exec xset s noblank
 
 # switch keyboard layout
 bindsym $mod+k exec bash ~/.config/i3/toggle-layout.sh
@@ -263,8 +268,8 @@ exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/adrien/.config/i3
 exec firefox -new-window https://gitlab.com/a.debord/anato-gestion/-/boards
 
 exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/adrien/.config/i3/socials.json'"
-exec firefox -new-window https://mm.anatoscope.com/
-exec firefox -new-window www.protonmail.com/login
+exec sleep 5 ; firefox -new-window https://mm.anatoscope.com/
+exec sleep 5 ; firefox -new-window www.protonmail.com/login
 
 exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/adrien/.config/i3/code.json'"
 exec code
@@ -274,6 +279,8 @@ assign [class="ClockWork"] 9
 assign [class="AnatoRun"] 9
 assign [class="CircleApp"] 9
 assign [class="runSofa2"] 9
+assign [class="PlagioHelmet"] 9
+assign [class="PlagioAnalysis"] 9
 
 # so i get the notifs ...
 exec gnome-calendar
