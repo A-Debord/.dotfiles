@@ -12,7 +12,9 @@ export LDFLAGS="-lstdc++ -lm"
 # Qt
 export Qt5_DIR=/mnt/data/Qt/5.12.0/gcc_64/lib/cmake/Qt5
 
+# Sofa
 export SOFAPYTHON_CHECK=0
+export ANATOSCOPE_DATA_DIR=/mnt/data/data/sofa
 
 # calculator 
 function = 

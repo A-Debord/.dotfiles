@@ -15,7 +15,7 @@
       {
          "class": "^Firefox$",
          "instance": "^Navigator$",
-         "title": "GitLab",
+         "title": "Sign in · GitLab — Mozilla Firefox",
          "window_role": "^browser$"
       }
    ],

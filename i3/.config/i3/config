@@ -265,11 +265,11 @@ workspace $ws10 output $sub
 
 # startup
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/adrien/.config/i3/fox.json'"
-exec firefox -new-window https://gitlab.com/a.debord/anato-gestion/-/boards
+exec firefox --new-window https://gitlab.com/a.debord/anato-gestion/-/boards
 
 exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/adrien/.config/i3/socials.json'"
-exec sleep 5 ; firefox -new-window https://mm.anatoscope.com/
-exec sleep 5 ; firefox -new-window www.protonmail.com/login
+exec firefox --new-window https://mm.anatoscope.com/
+exec firefox --new-window www.protonmail.com/login
 
 exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/adrien/.config/i3/code.json'"
 exec code
