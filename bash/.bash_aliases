@@ -9,9 +9,6 @@ export CCACHE_PREFIX="distcc"
 # clang + libstdc++
 export LDFLAGS="-lstdc++ -lm"
 
-# Qt
-export Qt5_DIR=/mnt/data/Qt/5.12.0/gcc_64/lib/cmake/Qt5
-
 # Sofa
 export SOFAPYTHON_CHECK=0
 export ANATOSCOPE_DATA_DIR=/mnt/data/data/sofa
@@ -71,4 +68,9 @@ git-tree ()
 wplexus ()
 {
   wakeonlan c8:d3:ff:44:94:e6
+}
+
+kplexus ()
+{
+  ssh adrien@plexus sudo poweroff
 }
