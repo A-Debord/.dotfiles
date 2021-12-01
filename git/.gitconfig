@@ -3,3 +3,5 @@
 	name = Adrien Debord
 [push]
 	default = current
+[diff]
+	tool = /usr/bin/code

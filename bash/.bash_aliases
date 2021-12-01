@@ -10,7 +10,7 @@ export CCACHE_PREFIX="distcc"
 export LDFLAGS="-lstdc++ -lm"
 
 # Sofa
-export SOFAPYTHON_CHECK=0
+export SOFAPYHON_MYPY_NO_SITE_PACKAGES=0
 export ANATOSCOPE_DATA_DIR=/mnt/data/data/sofa
 
 # calculator 
@@ -22,7 +22,13 @@ function =
 sofa ()
 {
   # release/bin/cli -a -n 4 --pull -m -p cimgplugin $@
-  release/bin/cli -a -n 4 --pull -m -d -p cimgplugin -p sofaqt $@ ; echo "exit code $?"
+  release/bin/cli -a -n 4 --pull -m -d -p cimgplugin $@ ; echo "exit code $?"
+}
+
+scli ()
+{
+  # release/bin/cli -a -n 4 --pull -m -p cimgplugin $@
+  release/bin/cli $@ ; echo "exit code $?"
 }
 
 dsofa ()
@@ -31,9 +37,14 @@ dsofa ()
   ASAN_OPTIONS=detect_leaks=0 debug/bin/cli -a -n 4 --pull -m -d -p cimgplugin $@ ; echo "exit code $?"
 }
 
-srsofa()
+sr()
 {
-  SOFA_SAVE_REGRESSION=1 sofa $@
+  SOFA_SAVE_REGRESSION=1 $@
+}
+
+b()
+{
+  make release && $@
 }
 
 rsofa()
@@ -58,6 +69,13 @@ create-branch ()
 
 cb(){
   create-branch $1
+}
+
+repair(){
+  git -C $1 checkout -b $(make branch) || 1
+  git -C $1 checkout master
+  git -C $1 reset --hard origin/master
+  git -C $1 checkout $(make branch)
 }
 
 git-tree ()

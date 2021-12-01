@@ -281,6 +281,7 @@ assign [class="CircleApp"] 9
 assign [class="runSofa2"] 9
 assign [class="PlagioHelmet"] 9
 assign [class="PlagioAnalysis"] 9
+assign [class="KAFO"] 9
 
 # so i get the notifs ...
 exec gnome-calendar
