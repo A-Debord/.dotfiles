@@ -10,8 +10,9 @@ export CCACHE_PREFIX="distcc"
 export LDFLAGS="-lstdc++ -lm"
 
 # Sofa
-export SOFAPYHON_MYPY_NO_SITE_PACKAGES=0
+export SOFAPYTHON_CHECK=0
 export ANATOSCOPE_DATA_DIR=/mnt/data/data/sofa
+export ASAN_SYMBOLIZER_PATH=/usr/bin/addr2line
 
 # calculator 
 function = 
