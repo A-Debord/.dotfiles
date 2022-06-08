@@ -13,10 +13,8 @@
     "percent": 0.5,
     "swallows": [
        {
-       "class": "^Firefox$",
-       // "instance": "^Navigator$",
-       "title": "Mattermost"
-       // "window_role": "^browser$"
+       "title": ".*Mattermost.*",
+       "window_role": "^browser$"
        }
     ],
     "type": "con"
@@ -32,14 +30,12 @@
       "x": 1920,
       "y": 37
     },
-    "name": "Login | ProtonMail - Mozilla Firefox",
+    "name": "proton",
     "percent": 0.5,
     "swallows": [
        {
-       "class": "^Firefox$",
-       // "instance": "^Navigator$",
-       "title": "ProtonMail"
-       // "window_role": "^browser$"
+       "title": ".*Proton.*",
+       "window_role": "^browser$"
        }
     ],
     "type": "con"
