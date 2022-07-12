@@ -12,7 +12,7 @@ export LDFLAGS="-lstdc++ -lm"
 # Sofa
 export SOFAPYTHON_CHECK=0
 export SOFA_POOL_THREADS=15
-export SOFA_EDITOR="code --goto {filename}:{lineno}"
+# export SOFA_EDITOR="code --goto {filename}:{lineno}"
 export ANATOSCOPE_DATA_DIR=/mnt/data/data/sofa
 export ASAN_SYMBOLIZER_PATH=/usr/bin/addr2line
 
