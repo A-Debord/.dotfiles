@@ -3,6 +3,7 @@
 	name = Adrien Debord
 [push]
 	default = current
+	autoSetupRemote = true
 [diff]
 	tool = /usr/bin/code
 [filter "lfs"]
