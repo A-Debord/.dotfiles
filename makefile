@@ -19,6 +19,9 @@ all-stow:
 
 	stow distcc
 
+	sudo rm /etc/icecc/icecc.conf
+	sudo stow -t /etc/icecc icecc
+
 vscode-install:
 	wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 	sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
