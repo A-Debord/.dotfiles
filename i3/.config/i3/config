@@ -265,7 +265,7 @@ workspace $ws10 output $sub
 
 # startup
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/adrien/.config/i3/fox.json'"
-exec firefox --new-window https://gitlab.com/a.debord/anato-gestion/-/boards
+exec firefox --new-window https://gitlab.com/
 
 exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/adrien/.config/i3/socials.json'"
 exec firefox --new-window https://mm.anatoscope.com/
