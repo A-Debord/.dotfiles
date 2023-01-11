@@ -4,7 +4,7 @@ export PATH=/home/adrien/.local/bin:$PATH
 export PATH=/usr/lib/ccache:$PATH
 
 # distcc
-export CCACHE_PREFIX="distcc"
+export CCACHE_PREFIX="icecc"
 
 # clang + libstdc++
 export LDFLAGS="-lstdc++ -lm"
