@@ -45,6 +45,11 @@ sr()
   SOFA_SAVE_REGRESSION=1 $@
 }
 
+pdb()
+{
+  SOFAPYTHON_DEBUG=1 $@
+}
+
 ko()
 {
   KEEP_OUTPUT=1 $@
