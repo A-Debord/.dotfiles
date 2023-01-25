@@ -243,6 +243,7 @@ exec xset s noblank
 
 # switch keyboard layout
 bindsym $mod+k exec bash ~/.config/i3/toggle-layout.sh
+exec setxkbmap -layout us -variant intl
 
 # style
 default_border pixel
@@ -265,7 +266,7 @@ workspace $ws10 output $sub
 
 # startup
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/adrien/.config/i3/fox.json'"
-exec firefox --new-window https://gitlab.com/
+exec firefox --new-window https://gitlab.com/users/sign_in
 
 exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/adrien/.config/i3/socials.json'"
 exec firefox --new-window https://mm.anatoscope.com/
