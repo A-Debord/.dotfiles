@@ -9,7 +9,7 @@
       "x": 2880,
       "y": 37
     },
-    "name": "mm",
+    "name": "chat",
     "percent": 0.5,
     "swallows": [
        {
@@ -30,11 +30,11 @@
       "x": 1920,
       "y": 37
     },
-    "name": "proton",
+    "name": "mail",
     "percent": 0.5,
     "swallows": [
        {
-       "title": ".*Proton.*",
+       "title": ".*réception.*",
        "window_role": "^browser$"
        }
     ],

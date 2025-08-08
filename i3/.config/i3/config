@@ -32,8 +32,8 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -270,7 +270,7 @@ exec firefox --new-window https://gitlab.com/users/sign_in
 
 exec --no-startup-id "i3-msg 'workspace 10; append_layout /home/adrien/.config/i3/socials.json'"
 exec firefox --new-window https://mm.anatoscope.com/
-exec firefox --new-window https://account.proton.me/login
+exec firefox --new-window https://mail.google.com/
 
 exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/adrien/.config/i3/code.json'"
 exec code
@@ -287,10 +287,12 @@ assign [class="ShoeLast"] 9
 assign [class="KAFO"] 9
 assign [class="Tracy"] 9
 assign [class="_qmltest$"] 9
+assign [class="SofaDebug$"] 9
+assign [class="Lucy$"] 9
 
 # so i get the notifs ...
 exec gnome-calendar
-assign [class="Gnome-calendar"] 8
+assign [class="gnome-calendar"] 8
 
 # enable numlock on startup
 exec numlockx on
