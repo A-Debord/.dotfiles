@@ -1,20 +1,28 @@
+
 export PATH=/home/adrien/.local/bin:$PATH
 
 # ccache
-export PATH=/usr/lib/ccache:$PATH
+# export PATH=/usr/lib/ccache:$PATH
 
 # distcc
 export CCACHE_PREFIX="icecc"
 
 # clang + libstdc++
+export CXX="clang++-15"
+export CC="clang-15"
 export LDFLAGS="-lstdc++ -lm"
 
 # Sofa
 export SOFAPYTHON_CHECK=0
+export SOFA_STABLE_NAMES=1
 export SOFA_POOL_THREADS=15
 export ANATOSCOPE_DATA_DIR=/mnt/data/data/sofa
-export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-14
-
+export ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-15
+export OPENBLAS_CORETYPE=Haswell 
+export OPENBLAS_NUM_THREADS=1 
+export OPENBLAS_VERBOSE=1 
+export NPY_DISABLE_SVML=1 
+export NPY_DISABLE_CPU_FEATURES=AVX512F,AVX512CD,AVX512_SKX,AVX512_CLX,AVX512_CNL,AVX512_ICL
 
 # calculator 
 function = 
